@@ -146,6 +146,21 @@ h1 {
     font-size: 0.9rem;
 }
 
+.upgrade-notice {
+    max-width: 720px;
+    margin: 1.25rem 0 0;
+    padding: 1rem 1.15rem;
+    border: 1px solid rgba(255, 157, 49, 0.45);
+    border-radius: 14px;
+    background: rgba(255, 121, 0, 0.09);
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
+.upgrade-notice strong {
+    color: var(--orange-bright);
+}
+
 .hero-art {
     position: relative;
     display: grid;
@@ -218,7 +233,7 @@ h3 {
 }
 
 .feature-grid p,
-.privacy > p {
+.privacy-copy {
     color: var(--muted);
 }
 
@@ -258,9 +273,18 @@ h3 {
     color: var(--text);
 }
 
-.privacy > p {
+.privacy-copy {
+    display: grid;
+    gap: 1rem;
+}
+
+.privacy-copy p {
     margin: 0;
     font-size: 1.12rem;
+}
+
+.privacy-copy a {
+    color: var(--orange-bright);
 }
 
 footer {
