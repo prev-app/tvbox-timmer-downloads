@@ -1,0 +1,355 @@
+:root {
+    color-scheme: dark;
+    --bg: #090a0c;
+    --panel: #131518;
+    --panel-soft: #1b1e22;
+    --orange: #ff7900;
+    --orange-bright: #ff9d31;
+    --green: #75c900;
+    --text: #f8f8f7;
+    --muted: #acb0b7;
+    --line: rgba(255, 255, 255, 0.11);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background:
+        radial-gradient(circle at 82% 18%, rgba(255, 121, 0, 0.15), transparent 28rem),
+        var(--bg);
+    color: var(--text);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+.topbar,
+main,
+footer {
+    width: min(1180px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+.topbar {
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    color: var(--orange);
+    font-size: 1.12rem;
+    font-weight: 850;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.top-link {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.top-link:hover,
+.top-link:focus-visible {
+    color: var(--text);
+}
+
+.hero {
+    min-height: 690px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+    gap: clamp(2rem, 7vw, 7rem);
+    align-items: center;
+    padding: 70px 0;
+}
+
+.eyebrow {
+    margin: 0 0 0.8rem;
+    color: var(--orange-bright);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+    text-wrap: balance;
+}
+
+h1 {
+    max-width: 780px;
+    margin: 0;
+    font-size: clamp(3rem, 6vw, 5.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.lead {
+    max-width: 680px;
+    margin: 1.8rem 0 0;
+    color: var(--muted);
+    font-size: clamp(1.08rem, 2vw, 1.32rem);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.4rem;
+    margin-top: 2.3rem;
+}
+
+.download-button {
+    display: inline-flex;
+    min-height: 58px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.55rem;
+    border: 2px solid var(--orange);
+    border-radius: 14px;
+    background: var(--orange);
+    color: #101010;
+    font-size: 1.05rem;
+    font-weight: 850;
+    text-decoration: none;
+    box-shadow: 0 14px 40px rgba(255, 121, 0, 0.23);
+    transition: transform 160ms ease, background 160ms ease;
+}
+
+.download-button:hover,
+.download-button:focus-visible {
+    background: var(--orange-bright);
+    transform: translateY(-2px);
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+.platform {
+    max-width: 280px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.hero-art {
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.hero-art img {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 520px);
+    aspect-ratio: 1;
+    border: 1px solid var(--line);
+    border-radius: 34px;
+    object-fit: cover;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+}
+
+.glow {
+    position: absolute;
+    width: 70%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgba(255, 121, 0, 0.28);
+    filter: blur(70px);
+}
+
+.features,
+.install,
+.privacy {
+    padding: 90px 0;
+    border-top: 1px solid var(--line);
+}
+
+.section-heading {
+    max-width: 760px;
+}
+
+h2 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.feature-grid article {
+    min-height: 250px;
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: linear-gradient(145deg, var(--panel-soft), var(--panel));
+}
+
+.number {
+    color: var(--orange);
+    font-size: 0.82rem;
+    font-weight: 850;
+}
+
+h3 {
+    margin: 4.5rem 0 0.55rem;
+    font-size: 1.3rem;
+    line-height: 1.15;
+}
+
+.feature-grid p,
+.privacy > p {
+    color: var(--muted);
+}
+
+.install,
+.privacy {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(2rem, 8vw, 8rem);
+}
+
+.install ol {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: pasos;
+}
+
+.install li {
+    position: relative;
+    padding: 1.25rem 0 1.25rem 3.7rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    counter-increment: pasos;
+}
+
+.install li::before {
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: 850;
+    content: "0" counter(pasos);
+}
+
+.install strong {
+    color: var(--text);
+}
+
+.privacy > p {
+    margin: 0;
+    font-size: 1.12rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 34px 0 46px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: var(--orange-bright);
+}
+
+.fine-print {
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+
+    .hero-art {
+        grid-row: 1;
+    }
+
+    .hero-art img {
+        width: min(78vw, 450px);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .install,
+    .privacy {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 580px) {
+    .topbar,
+    main,
+    footer {
+        width: min(100% - 28px, 1180px);
+    }
+
+    .top-link {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 42px 0 72px;
+    }
+
+    h1 {
+        font-size: clamp(2.75rem, 14vw, 4.2rem);
+    }
+
+    .download-button {
+        width: 100%;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid article {
+        min-height: 210px;
+    }
+
+    h3 {
+        margin-top: 2.8rem;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .fine-print {
+        text-align: left;
+    }
+}
