@@ -1,0 +1,7 @@
+{
+  "versionCode": 22,
+  "versionName": "2.2",
+  "apkUrl": "https://github.com/prev-app/tvbox-timmer-downloads/releases/download/v2.2/TVBox_Timmer_v2.2.apk",
+  "sha256": "6956c5cf31ccae5594797ca03d4c37b33bf119517df8fb7a448f48ae66d248ce",
+  "releaseNotes": "Nuevo actualizador integrado, aviso del último minuto más pequeño y translúcido, y Accesibilidad persistente sin entrar a Ajustes en cada inicio."
+}
